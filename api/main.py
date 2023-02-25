@@ -30,7 +30,7 @@ async def copy_code(path_to_file: str):
 @app.get("/download_file")
 async def copy_code(path_to_file: str, file_name:str):
     try:
-        return FileResponse(f"../flutterwidgets/{path_to_file}", media_type='application/octet-stream',filename=file_name)
+        return FileResponse(f"../flutterwidgets/{path_to_file}", media_type='application/octet-stream',filename=f"{file_name}.dart")
     except Exception as e: 
         print(e)
         return HTTPException()
