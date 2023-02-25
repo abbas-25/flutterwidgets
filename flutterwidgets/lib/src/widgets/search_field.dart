@@ -16,10 +16,11 @@ class SearchField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool showLessHorizontalPadding = MediaQuery.of(context).size.width < 400;
     return SizedBox(
-        width: size.width * 0.60,
+        width: showLessHorizontalPadding ? size.width * 0.60 : size.width * 0.80,
         child: ContainerGradientBorder(
-          width: size.width * 0.60,
+          width: showLessHorizontalPadding ? size.width * 0.60 : size.width * 0.80,
           borderRadius: 30,
           borderWidth: 5,
           height: 60,

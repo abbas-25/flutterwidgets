@@ -39,8 +39,8 @@ class _SearchPageState extends State<SearchPage> {
             return SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(height: 40),
-                  SearchPageHeading(),
+                  SizedBox(height: 80),
+                  Padding(padding:EdgeInsets.symmetric(horizontal: 20) , child: SearchPageHeading()),
                   SizedBox(height: 40),
                   SearchField(
                     size: size,
@@ -48,7 +48,6 @@ class _SearchPageState extends State<SearchPage> {
                     onSubmit: (value) {
                       if (value.isNotEmpty) {
                         widget.searchNotifier.loadSearchResults(value);
-                        // perform search
                       } else {
                         widget.searchNotifier.resetSearch();
                       }

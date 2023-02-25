@@ -11,7 +11,7 @@ class SearchPageHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GradientText(
-        "Open Source collection of flutter UIs\nto accelerate development",
+        "Open Source collection of FLUTTER UIs\nto accelerate development",
         colors: [
           Colors.deepPurple,
           Colors.deepOrange,

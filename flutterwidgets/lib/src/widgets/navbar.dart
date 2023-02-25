@@ -34,12 +34,12 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
             // Navigator.pushNamed(context, "routeName");
           },
         ),
-        NavBarItem(
-          text: "All Widgets",
-          onTap: () {
-            // Navigator.pushNamed(context, "routeName");
-          },
-        ),
+        // NavBarItem(
+        //   text: "All Widgets",
+        //   onTap: () {
+        //     // Navigator.pushNamed(context, "routeName");
+        //   },
+        // ),
         NavBarItem(
           text: "Contribute",
           onTap: () {

@@ -21,9 +21,9 @@ class _MyAppState extends State<MyApp> {
     return OKToast(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'FlutterWidgets',
+        title: 'flutterwidgets.live',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.purple,
         ),
         home: SearchPage(
           searchNotifier: _searchNotifer,

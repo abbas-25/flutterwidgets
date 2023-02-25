@@ -8,12 +8,14 @@ class WidgetItem {
   final List<String> assetPaths;
   final String title;
   final String searchKeywords;
+  final String? contributorGithubUsername;
   WidgetItem({
     required this.filePath,
     required this.thumbnailPath,
     required this.assetPaths,
     required this.title,
     required this.searchKeywords,
+    required this.contributorGithubUsername,
   });
 
   WidgetItem copyWith({
@@ -22,6 +24,7 @@ class WidgetItem {
     List<String>? assetPaths,
     String? title,
     String? searchKeywords,
+    String? contributorGithubUsername,
   }) {
     return WidgetItem(
       filePath: filePath ?? this.filePath,
@@ -29,6 +32,7 @@ class WidgetItem {
       assetPaths: assetPaths ?? this.assetPaths,
       title: title ?? this.title,
       searchKeywords: searchKeywords ?? this.searchKeywords,
+      contributorGithubUsername: contributorGithubUsername ?? this.contributorGithubUsername,
     );
   }
 
@@ -49,6 +53,7 @@ class WidgetItem {
       assetPaths: List<String>.from(map['asset_paths']),
       title: map['title'] ?? '',
       searchKeywords: map['search_keyword'] ?? '',
+      contributorGithubUsername: map['contributor_github_username'] ?? '',
     );
   }
 
@@ -58,7 +63,7 @@ class WidgetItem {
 
   @override
   String toString() {
-    return 'WidgetItem(file_path: $filePath, thumbnail_path: $thumbnailPath, asset_paths: $assetPaths, title: $title, search_keyword: $searchKeywords)';
+    return 'WidgetItem(file_path: $filePath, thumbnail_path: $thumbnailPath, asset_paths: $assetPaths, title: $title, search_keyword: $searchKeywords, contributor_github_username: $contributorGithubUsername)';
   }
 
   @override
@@ -68,6 +73,7 @@ class WidgetItem {
     return other is WidgetItem &&
       other.filePath == filePath &&
       other.thumbnailPath == thumbnailPath &&
+      other.contributorGithubUsername == contributorGithubUsername &&
       listEquals(other.assetPaths, assetPaths) &&
       other.title == title &&
       other.searchKeywords == searchKeywords;
@@ -79,6 +85,7 @@ class WidgetItem {
       thumbnailPath.hashCode ^
       assetPaths.hashCode ^
       title.hashCode ^
+      contributorGithubUsername.hashCode ^
       searchKeywords.hashCode;
   }
 }

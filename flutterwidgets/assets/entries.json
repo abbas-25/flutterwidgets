@@ -4,6 +4,7 @@
         "thumbnail_path": "assets/thumbnails/social-media-post.jpeg", 
         "asset_paths": [], 
         "title": "social media post card", 
-        "search_keyword": "social media post card instagram facebook"
+        "search_keyword": "social media post card instagram facebook", 
+        "contributor_github_username": "abbas-25"
     }
 ]
