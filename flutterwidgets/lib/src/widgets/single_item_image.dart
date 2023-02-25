@@ -10,14 +10,16 @@ class ItemImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ImageNetwork(
-      duration: 1500,
-      borderRadius: BorderRadius.circular(16),
-      fullScreen: true,
-      // fitWeb: .contain,
-      image: image,
-      height: 500,
-      width: 500,
-    );
+    return image.startsWith("asset")
+        ? Image.asset(image)
+        : ImageNetwork(
+            duration: 1500,
+            borderRadius: BorderRadius.circular(16),
+            fullScreen: true,
+            // fitWeb: .contain,
+            image: image,
+            height: 500,
+            width: 500,
+          );
   }
 }

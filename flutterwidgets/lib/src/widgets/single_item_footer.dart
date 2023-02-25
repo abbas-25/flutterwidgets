@@ -3,6 +3,7 @@ import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutterwidgets/src/core/constants.dart';
 import 'package:flutterwidgets/src/core/typography.dart';
 import 'package:flutterwidgets/src/models/widget_item.dart';
 import 'package:http/http.dart';
@@ -41,7 +42,7 @@ class ItemFooter extends StatelessWidget {
                     icon: Icon(Icons.code),
                     onPressed: () async {
                       get(Uri.parse(
-                              "http://127.0.0.1:8000/copy_code?path_to_file=${item.filePath}"))
+                              "${endpoint}copy_code?path_to_file=${item.filePath}"))
                           .then((content) {
                         final decoded = jsonDecode(content.body);
 
@@ -65,7 +66,7 @@ class ItemFooter extends StatelessWidget {
                     onPressed: () async {
                       try {
                         html.window.open(
-                            "http://127.0.0.1:8000/download_file?path_to_file=${item.filePath}&file_name=${item.title.replaceAll(" ", "_")}",
+                            "${endpoint}download_file?path_to_file=${item.filePath}&file_name=${item.title.replaceAll(" ", "_")}",
                             '${item.title}');
                       } catch (exception) {
                         print(exception.toString());
