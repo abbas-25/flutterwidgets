@@ -4,4 +4,4 @@ An open source collection of flutter widgets to accelerate UI development for co
 
 ## Getting Started
 
-Visit [flutterwidgets.io](https://flutterwidgets.io) to search for widgets, view pictures and copy code in a single click!
+Visit [flutterwidgets.live](http://flutterwidgets.live) to search for widgets, view pictures and copy code in a single click!
