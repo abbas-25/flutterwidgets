@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
     return OKToast(
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Widgets',
+        title: 'FlutterWidgets',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

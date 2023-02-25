@@ -17,7 +17,7 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
       screenWidth: width,
       title: Padding(
         padding: EdgeInsets.only(top: 20),
-        child: GradientText("FlutterWidgets.io",
+        child: GradientText("FlutterWidgets.live",
             colors: [Colors.deepPurple, Colors.deepOrange, Colors.pink],
             style: AppTypography.poppins(
               size: 24,
