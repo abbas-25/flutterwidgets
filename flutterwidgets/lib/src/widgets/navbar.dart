@@ -2,6 +2,7 @@ import 'package:adaptive_navbar/adaptive_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterwidgets/src/core/typography.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'dart:html' as html;
 
 class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
   const AppNavBar({
@@ -29,9 +30,13 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
       centerTitle: false,
       navBarItems: [
         NavBarItem(
-          text: "Contributors",
+          text: "Github",
           onTap: () {
-            // Navigator.pushNamed(context, "routeName");
+            try { 
+                html.window.open("https://github.com/abbas-25/flutterwidgets", "flutterwidgets github");
+            } catch (exception) {
+              print(exception.toString());
+            }
           },
         ),
         // NavBarItem(
@@ -40,12 +45,12 @@ class AppNavBar extends StatelessWidget implements PreferredSizeWidget {
         //     // Navigator.pushNamed(context, "routeName");
         //   },
         // ),
-        NavBarItem(
-          text: "Contribute",
-          onTap: () {
-            // Navigator.pushNamed(context, "routeName");
-          },
-        ),
+        // NavBarItem(
+        //   text: "Contribute",
+        //   onTap: () {
+        //     // Navigator.pushNamed(context, "routeName");
+        //   },
+        // ),
       ],
     );
   }

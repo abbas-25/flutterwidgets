@@ -53,7 +53,7 @@ class WidgetItem {
       assetPaths: List<String>.from(map['asset_paths']),
       title: map['title'] ?? '',
       searchKeywords: map['search_keyword'] ?? '',
-      contributorGithubUsername: map['contributor_github_username'] ?? '',
+      contributorGithubUsername: map['contributor_github_username'],
     );
   }
 

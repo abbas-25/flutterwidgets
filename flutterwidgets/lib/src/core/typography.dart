@@ -7,12 +7,14 @@ class AppTypography {
     FontStyle? style,
     Color? color,
     FontWeight? weight, 
+    TextDecoration? decoration, 
   }) {
     return GoogleFonts.poppins(
         fontSize: size ?? 18,
         fontStyle: style ?? FontStyle.normal,
         color: color ?? Colors.white, 
-        fontWeight: weight ?? FontWeight.normal, 
+        fontWeight: weight ?? FontWeight.normal,
+        decoration: decoration,  
         );
   }
 }

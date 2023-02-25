@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutterwidgets/src/models/widget_item.dart';
+import 'package:flutterwidgets/src/widgets/item_header.dart';
 import 'package:flutterwidgets/src/widgets/single_item_footer.dart';
 import 'package:flutterwidgets/src/widgets/single_item_image.dart';
 
@@ -30,9 +31,10 @@ class SingleGridItem extends StatelessWidget {
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ItemFooter(item:item),
+                ItemFooter(item: item),
               ],
             )),
+            Positioned(top: 2, right: 2, child: ItemHeader(item: item)),
           ],
         ));
   }
